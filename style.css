@@ -10,11 +10,12 @@ body{
 }
 .wrapper{
     width: 100vw;
-    height: 50vh;
+    height: 40vh;
     display: grid;
     grid-template-columns: 150px auto 150px;
 }
 .wrapper:last-child{
+    height: 60vh;
     grid-template-columns: 50% 50%;
     grid-template-rows: 28% 72%;
 }
@@ -25,10 +26,12 @@ body{
     grid-area: 1/2;
 }
 .sixth{
-    grid-area: 2/3/2/1;
+    grid-area: 2/3/3/1;
 }
-.wrapper > .wrapper{
+.fourth-fifth{
     grid-template-columns: 60% 40%;
+    grid-area: 1/2/3/1;
+    display: grid;
     grid-template-rows: 28% 72%;
     width: 100%;
 }
@@ -46,6 +49,13 @@ body{
 }
 @media screen and (max-width: 768px) {
     .wrapper{
+        display: flex;
+        flex-direction: column;
+    }
+    .wrapper:last-child{
+        display: flex;
+    }
+    .fourth-fifth{
         display: flex;
         flex-direction: column;
     }
